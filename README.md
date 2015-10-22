@@ -15,7 +15,7 @@ LingH5容器为Web提供了各种移动设备的功能支持
 
 - 示例
   
-  ``` json
+  ``` javascript
   {
        error:1,
        errorMessage:'接口不存在'
