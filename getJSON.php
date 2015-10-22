@@ -19,5 +19,6 @@ $data = [
         "title" => "BridgeTest😈",
         "url" => "http://api.zeroling.com/LingJSBridgeTest/"
     ]]
-
 ];
+
+echo json_encode($data);
