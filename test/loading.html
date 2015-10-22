@@ -17,9 +17,13 @@
 <script src="https://a.alipayobjects.com/amui/zepto/1.1.3/zepto.js"></script>
 <script>
     document.addEventListener('LingJSBridgeReady', function () {
+        function hideLoading () {
+            LingJSBridge.call('hideLoading');
+        }
         $("#showLoading0").on("click", function () {
             LingJSBridge.call("showLoading", function (ret) {
                 console.log(ret);
+                setTimeout(hideLoading, 2000);
             });
         });
         $("#showLoading1").on("click", function () {
@@ -27,6 +31,7 @@
                 text: "加载中"
             }, function (ret) {
                 console.log(ret);
+                setTimeout(hideLoading, 2000);
             });
         });
         $("#showLoading2").on("click", {
@@ -34,6 +39,7 @@
             }, function () {
             LingJSBridge.call("showLoading", function (ret) {
                 console.log(ret);
+                setTimeout(hideLoading, 2000);
             });
         });
         $("#showLoading3").on("click", {
@@ -42,6 +48,7 @@
         }, function () {
             LingJSBridge.call("showLoading", function (ret) {
                 console.log(ret);
+                setTimeout(hideLoading, 2000);
             });
         });
     });
